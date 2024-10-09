@@ -6,8 +6,7 @@ function menu_principal() {
   echo "Menú de Módulos de Red y Escaneo"
   echo "1. Escaneo de Puertos"
   echo "2. Monitoreo de Red"
-  echo "3. Herramientas Inside Nano"
-  echo "4. Salir"
+  echo "3. Salir"
 }
 
 # Bucle principal del script
@@ -24,10 +23,6 @@ while true; do
       source ./Monitoreo_Red.sh
       ;;
     3)
-      # Llamar al módulo inside_nano.sh
-      source ./inside_nano.sh
-      ;;
-    4)
       echo "Saliendo..."
       exit 0
       ;;
