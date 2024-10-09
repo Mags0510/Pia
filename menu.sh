@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Cargar los módulos
-source ./escaneo_puertos.sh
-source ./Monitoreo_Red.sh
-source ./inside_nano.sh
-
 # Función para mostrar el menú principal
 function menu_principal() {
   clear
@@ -13,7 +8,6 @@ function menu_principal() {
   echo "2. Monitoreo de Red"
   echo "3. Herramientas Inside Nano"
   echo "4. Salir"
-  read -p "Selecciona una opción: " opcion
 }
 
 # Bucle principal del script
@@ -22,16 +16,16 @@ while true; do
   read -p "Selecciona una opción: " opcion
   case $opcion in
     1)
-      # Llamar a la función principal del módulo escaneo_puertos.sh
-      escaneo_puertos
+      # Llamar al módulo escaneo_puertos.sh
+      source ./escaneo_puertos.sh
       ;;
     2)
-      # Llamar a la función principal del módulo Monitoreo_Red.sh
-      monitoreo_red
+      # Llamar al módulo Monitoreo_Red.sh
+      source ./Monitoreo_Red.sh
       ;;
     3)
-      # Llamar a la función principal del módulo inside_nano.sh
-      inside_nano
+      # Llamar al módulo inside_nano.sh
+      source ./inside_nano.sh
       ;;
     4)
       echo "Saliendo..."
