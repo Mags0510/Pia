@@ -6,7 +6,7 @@ function menu() {
   echo "2. Verificar conectividad a hosts"
   echo "3. Detectar dispositivos y conexiones de red con nmcli"
   echo "4. Salir"
-  read -p "Selecciona una opción: " opcion
+  read -p "Selecciona una opcion: " opcion
 }
 
 
@@ -56,7 +56,7 @@ while true; do
       ;;
     4)
       echo "Saliendo..."
-      exit 0
+      return
       ;;
     *)
       echo "Opción inválida"
